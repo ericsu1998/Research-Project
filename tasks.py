@@ -75,7 +75,7 @@ def readData(filename, episode):
 def testAndVisualizeData(filename, episode, numImages):
 	f = filename
 	images = readData(filename, episode)
-	print(len(images))
+	print("Data size: " + str(len(images)))
 	#imageSubset = random.sample(range(0,))
 	imageSample = []
 	try: 
@@ -110,8 +110,6 @@ def testGatherData():
 			print("")
 		print("")
 
-	print("")
-
 def testReadData():
 	testFile = h5py.File("test.hdf5", "a")
 	readData(testFile, 0)
@@ -121,7 +119,7 @@ def testTestAndVisualizeData():
 	testAndVisualizeData(testFile, 0, 5)
 
 def testAll():
-	#testGatherData()
+	testGatherData()
 	testReadData()
 	testTestAndVisualizeData()
 
